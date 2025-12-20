@@ -30,7 +30,7 @@ export default function BlogPage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/20">
-          <div className="container">
+          <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-balance">
                 Our <span className="text-primary">Blog</span>
@@ -56,7 +56,7 @@ export default function BlogPage() {
 
         {/* Filter Section */}
         <section className="py-8 border-b border-border">
-          <div className="container">
+          <div className="container mx-auto">
             <div className="flex flex-wrap gap-3 justify-center">
               {blogCategories.map((category) => (
                 <Button
@@ -76,7 +76,7 @@ export default function BlogPage() {
 
         {/* Blog Grid */}
         <section className="py-16 md:py-24">
-          <div className="container">
+          <div className="container mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post) => (
                 <BlogCard key={post.id} post={post} />

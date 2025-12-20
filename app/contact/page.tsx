@@ -51,8 +51,8 @@ export default function ContactPage() {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/20">
-          <div className="container">
+        <section className="py-16 md:py-24 from-background to-muted/20">
+          <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-balance">
                 Get in <span className="text-primary">Touch</span>
@@ -66,7 +66,7 @@ export default function ContactPage() {
 
         {/* Contact Form & Info */}
         <section className="py-16 md:py-24">
-          <div className="container">
+          <div className="container mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
               {/* Contact Form */}
               <Card>
@@ -170,7 +170,6 @@ export default function ContactPage() {
                       <div>
                         <h3 className="font-semibold mb-1">Email</h3>
                         <p className="text-sm text-muted-foreground">info@softzyne.com</p>
-                        <p className="text-sm text-muted-foreground">support@softzyne.com</p>
                       </div>
                     </CardContent>
                   </Card>
@@ -182,8 +181,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Phone</h3>
-                        <p className="text-sm text-muted-foreground">+880 1234567890</p>
-                        <p className="text-sm text-muted-foreground">+880 0987654321</p>
+                        <p className="text-sm text-muted-foreground">+880 1886557070</p>
                       </div>
                     </CardContent>
                   </Card>
@@ -195,27 +193,13 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Office</h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed">Chittagong, Bangladesh</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">A.R. Garden, Amanat Ullah Road, Pahartali, Chittagong, Bangladesh</p>
                       </div>
                     </CardContent>
                   </Card>
                 </div>
 
-                <Card className="bg-muted/50">
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold mb-3">Business Hours</h3>
-                    <div className="space-y-2 text-sm text-muted-foreground">
-                      <div className="flex justify-between">
-                        <span>Saturday - Thursday</span>
-                        <span>9:00 AM - 6:00 PM</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Friday</span>
-                        <span>Closed</span>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                
               </div>
             </div>
           </div>

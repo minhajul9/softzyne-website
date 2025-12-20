@@ -42,7 +42,7 @@ export function ClientsPartners() {
 
   return (
     <section ref={sectionRef} className="py-16 md:py-24 bg-background">
-      <div className="container">
+      <div className="container mx-auto">
         {/* Our Clients */}
         <div className="mb-16">
           <div className="text-center mb-12 space-y-4">

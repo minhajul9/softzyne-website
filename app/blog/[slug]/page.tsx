@@ -30,7 +30,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <main className="flex-1">
         {/* Back Button */}
         <section className="py-6 border-b border-border">
-          <div className="container">
+          <div className="container mx-auto">
             <Button asChild variant="ghost">
               <Link href="/blog">
                 <ArrowLeft className="mr-2 h-4 w-4" />
@@ -42,7 +42,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
         {/* Article Header */}
         <section className="py-12 md:py-16">
-          <div className="container">
+          <div className="container mx-auto">
             <div className="max-w-4xl mx-auto space-y-6">
               <Badge className="bg-primary text-primary-foreground">{post.category}</Badge>
               <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-balance">{post.title}</h1>
@@ -84,7 +84,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
         {/* Featured Image */}
         <section className="py-8">
-          <div className="container">
+          <div className="container mx-auto">
             <div className="max-w-4xl mx-auto">
               <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden">
                 <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="object-cover" />
@@ -95,7 +95,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
         {/* Article Content */}
         <section className="py-8 md:py-12">
-          <div className="container">
+          <div className="container mx-auto">
             <div className="max-w-4xl mx-auto">
               <div className="grid lg:grid-cols-4 gap-12">
                 {/* Main Content */}
@@ -161,7 +161,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         {/* Related Posts */}
         {relatedPosts.length > 0 && (
           <section className="py-16 md:py-24 bg-muted/30">
-            <div className="container">
+            <div className="container mx-auto">
               <div className="max-w-6xl mx-auto">
                 <h2 className="text-2xl md:text-3xl font-bold mb-8">Related Articles</h2>
                 <div className="grid md:grid-cols-3 gap-6">

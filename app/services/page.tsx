@@ -71,7 +71,7 @@ export default function ServicesPage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/20">
-          <div className="container">
+          <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-balance">
                 Our <span className="text-brand-blue">Services</span>
@@ -85,7 +85,7 @@ export default function ServicesPage() {
 
         {/* Services List */}
         <section className="py-16 md:py-24">
-          <div className="container space-y-24">
+          <div className="container mx-auto space-y-24">
             {services.map((service, index) => (
               <div
                 key={index}
@@ -122,7 +122,7 @@ export default function ServicesPage() {
 
         {/* CTA Section */}
         <section className="py-16 md:py-24 bg-muted/30">
-          <div className="container">
+          <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-balance">Ready to Start Your Project?</h2>
               <p className="text-lg text-muted-foreground text-pretty">

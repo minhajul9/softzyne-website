@@ -28,7 +28,7 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
       <main className="flex-1">
         {/* Back Button */}
         <section className="py-6 border-b border-border">
-          <div className="container">
+          <div className="container mx-auto">
             <Button asChild variant="ghost">
               <Link href="/portfolio">
                 <ArrowLeft className="mr-2 h-4 w-4" />
@@ -40,7 +40,7 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
 
         {/* Hero Image */}
         <section className="py-12 md:py-16 bg-muted/30">
-          <div className="container">
+          <div className="container mx-auto">
             <div className="max-w-5xl mx-auto">
               <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden">
                 <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
@@ -51,7 +51,7 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
 
         {/* Project Details */}
         <section className="py-12 md:py-16">
-          <div className="container">
+          <div className="container mx-auto">
             <div className="max-w-5xl mx-auto">
               <div className="grid lg:grid-cols-3 gap-12">
                 {/* Main Content */}
@@ -145,7 +145,7 @@ export default function ProjectDetailPage({ params }: { params: { id: string } }
 
         {/* Related Projects */}
         <section className="py-12 md:py-16 bg-muted/30">
-          <div className="container">
+          <div className="container mx-auto">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-2xl md:text-3xl font-bold mb-8">More Projects</h2>
               <div className="grid md:grid-cols-2 gap-6">

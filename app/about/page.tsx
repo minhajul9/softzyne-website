@@ -40,7 +40,7 @@ export default function AboutPage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/20">
-          <div className="container">
+          <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-balance">
                 About <span className="text-brand-blue">Softzyne</span>
@@ -54,7 +54,7 @@ export default function AboutPage() {
 
         {/* Who We Are */}
         <section className="py-16 md:py-24">
-          <div className="container">
+          <div className="container mx-auto">
             <div className="max-w-4xl mx-auto space-y-6">
               <div className="flex items-center gap-3 mb-6">
                 <div className="h-12 w-12 rounded-lg bg-brand-blue/10 flex items-center justify-center">
@@ -80,7 +80,7 @@ export default function AboutPage() {
 
         {/* Mission & Vision */}
         <section className="py-16 md:py-24 bg-muted/30">
-          <div className="container">
+          <div className="container mx-auto">
             <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               <Card className="border-2">
                 <CardContent className="p-8 space-y-4">
@@ -115,7 +115,7 @@ export default function AboutPage() {
 
         {/* Founding Team */}
         <section className="py-16 md:py-24">
-          <div className="container">
+          <div className="container mx-auto">
             <div className="text-center mb-12 space-y-4">
               <h2 className="text-3xl md:text-5xl font-bold">Our Founding Members</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -147,7 +147,7 @@ export default function AboutPage() {
 
         {/* Our Clients */}
         <section className="py-16 md:py-24 bg-muted/30">
-          <div className="container">
+          <div className="container mx-auto">
             <div className="text-center mb-12 space-y-4">
               <h2 className="text-3xl md:text-5xl font-bold">Our Clients</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -169,7 +169,7 @@ export default function AboutPage() {
 
         {/* CTA Section */}
         <section className="py-16 md:py-24">
-          <div className="container">
+          <div className="container mx-auto">
             <div className="max-w-3xl mx-auto text-center space-y-6">
               <h2 className="text-3xl md:text-4xl font-bold text-balance">Let's Work Together</h2>
               <p className="text-lg text-muted-foreground text-pretty">
