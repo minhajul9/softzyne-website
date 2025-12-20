@@ -34,9 +34,9 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
+      className={`sticky top-0 z-100 w-full border-b border-border/40 bg-background/95   transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
     >
-      <nav className="container flex h-16 items-center justify-between">
+      <nav className="container mx-auto flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/images/logo-fb-dp-removebg-preview.png"
