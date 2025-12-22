@@ -83,11 +83,11 @@ export function HeroCarousel() {
             {slides.map((slide, index) => (
               <CarouselItem key={index}>
                 <div className="container mx-auto space-y-6 animate-fade-in">
-                  <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
+                  <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight max-w-7xl">
                     {slide.title}
                   </h1>
 
-                  <p className="text-lg md:text-xl text-gray-200 max-w-2xl">
+                  <p className="text-lg md:text-xl text-gray-200 max-w-3xl">
                     {slide.description}
                   </p>
 

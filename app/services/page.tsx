@@ -17,7 +17,7 @@ const services = [
     title: "Digital Marketing",
     description:
       "Comprehensive digital marketing strategies including SEO, social media marketing, content marketing, and PPC campaigns. We help you reach your target audience and achieve measurable results that grow your business.",
-    image: "/digital-marketing-service.jpg",
+    image: "/digital-marketing-service.png",
     imagePosition: "right" as const,
   },
   {
@@ -59,7 +59,7 @@ const services = [
     title: "Maintenance & Support",
     description:
       "Ongoing website maintenance, updates, security monitoring, and technical support. We keep your website running smoothly with regular updates, bug fixes, and performance optimization to ensure peace of mind.",
-    image: "/maintenance-support-service.jpg",
+    image: "/maintenance-support-service.png",
     imagePosition: "right" as const,
   },
 ]

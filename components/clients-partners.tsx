@@ -2,21 +2,20 @@
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
+import Autoplay from "embla-carousel-autoplay"
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel"
 
 const clients = [
-  { name: "Tech Corp", logo: "/tech-company-logo.jpg" },
-  { name: "Digital Agency", logo: "/digital-agency-logo.png" },
-  { name: "E-commerce Store", logo: "/ecommerce-brand-logo.png" },
-  { name: "Startup Inc", logo: "/startup-logo.png" },
-  { name: "Restaurant Chain", logo: "/generic-restaurant-logo.png" },
-  { name: "Education Platform", logo: "/education-platform-logo.png" },
-]
-
-const partners = [
-  { name: "Google Partner", logo: "/google-partner-badge.jpg" },
-  { name: "Meta Business", logo: "/meta-business-partner.jpg" },
-  { name: "AWS", logo: "/aws-partner-logo.jpg" },
-  { name: "Vercel", logo: "/vercel-partner-logo.jpg" },
+  { name: "Industry Insider", logo: "/industry-insider.png" },
+  { name: "Techvibe Global", logo: "/techvibe.jpg" },
+  { name: "Science Workshop", logo: "/science.png" },
+  { name: "ASB Link", logo: "/ASBLINK.webp" },
+  { name: "QRF Security Services", logo: "/QRF-LOGO.png" },
 ]
 
 export function ClientsPartners() {
@@ -25,83 +24,75 @@ export function ClientsPartners() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true)
-        }
-      },
-      { threshold: 0.1 },
+      ([entry]) => entry.isIntersecting && setIsVisible(true),
+      { threshold: 0.1 }
     )
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current)
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current)
     return () => observer.disconnect()
   }, [])
 
   return (
     <section ref={sectionRef} className="py-16 md:py-24 bg-background">
       <div className="container mx-auto">
-        {/* Our Clients */}
-        <div className="mb-16">
-          <div className="text-center mb-12 space-y-4">
-            <h2 className="text-3xl md:text-5xl font-bold text-balance">Our Clients</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-              Trusted by leading businesses across various industries
-            </p>
-          </div>
+        {/* Heading */}
+        <div className="text-center mb-12 space-y-4">
+          <h2 className="text-3xl md:text-5xl font-bold">Our Clients</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Trusted by leading businesses across various industries
+          </p>
+        </div>
 
-          <div
-            className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center ${isVisible ? "animate-fade-in" : "opacity-0"}`}
-          >
+        {/* Carousel */}
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          plugins={[
+            // @ts-ignore
+            Autoplay({
+              delay: 2500,
+              stopOnInteraction: true,
+            }),
+          ]}
+          className={`w-full ${
+            isVisible ? "animate-fade-in" : "opacity-0"
+          }`}
+        >
+          <CarouselContent className="-ml-4">
             {clients.map((client, index) => (
-              <div
+              <CarouselItem
                 key={index}
-                className="flex items-center justify-center p-4 rounded-lg bg-muted/30 hover:bg-muted/50 transition-colors"
-                style={{ animationDelay: `${index * 50}ms` }}
+                className="
+                  
+                  basis-1/2
+                  sm:basis-1/3
+                  md:basis-1/4
+                  lg:basis-1/5
+                "
               >
-                <Image
-                  src={client.logo || "/placeholder.svg"}
-                  alt={client.name}
-                  width={160}
-                  height={80}
-                  className="w-full h-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
-                />
-              </div>
+                <div className="flex items-center justify-center p-3
+                                rounded-lg
+                                bg-muted/30 hover:bg-muted/50
+                                transition">
+                  <div className="relative w-32 h-32 bg-muted/30 hover:bg-muted/50">
+                    <Image
+                      src={client.logo}
+                      alt={client.name}
+                      title={client.name}
+                      fill
+                      className="object-contain
+                                 opacity-60 hover:opacity-100
+                                 grayscale hover:grayscale-0
+                                 transition"
+                    />
+                  </div>
+                </div>
+              </CarouselItem>
             ))}
-          </div>
-        </div>
-
-        {/* Digital Partnerships */}
-        <div>
-          <div className="text-center mb-12 space-y-4">
-            <h2 className="text-3xl md:text-5xl font-bold text-balance">Digital Partnerships</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-              Partnered with industry leaders to deliver excellence
-            </p>
-          </div>
-
-          <div
-            className={`grid grid-cols-2 md:grid-cols-4 gap-8 items-center max-w-4xl mx-auto ${isVisible ? "animate-fade-in" : "opacity-0"}`}
-          >
-            {partners.map((partner, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center p-6 rounded-lg bg-muted/30 hover:bg-muted/50 transition-colors"
-                style={{ animationDelay: `${(clients.length + index) * 50}ms` }}
-              >
-                <Image
-                  src={partner.logo || "/placeholder.svg"}
-                  alt={partner.name}
-                  width={140}
-                  height={60}
-                  className="w-full h-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+          </CarouselContent>
+        </Carousel>
       </div>
     </section>
   )

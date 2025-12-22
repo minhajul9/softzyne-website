@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Facebook, Linkedin, Mail, Phone, MapPin } from "lucide-react"
+import { Facebook, Linkedin, Mail, Phone, MapPin, Instagram } from "lucide-react"
 
 export function Footer() {
   return (
@@ -24,7 +24,7 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/softzyne"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-brand-orange transition-colors"
@@ -33,13 +33,22 @@ export function Footer() {
                 <Facebook className="h-5 w-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/softzyne-solutions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-brand-orange transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
+              </a>
+              <a
+                href="https://www.instagram.com/softzyne/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-brand-orange transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Instagram className="h-5 w-5" />
               </a>
             </div>
           </div>
@@ -79,7 +88,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm text-gray-400">
                 <Phone className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>+880 1234567890</span>
+                <span>+880 1886-557070</span>
               </li>
               <li className="flex items-start gap-2 text-sm text-gray-400">
                 <Mail className="h-4 w-4 mt-0.5 flex-shrink-0" />
@@ -87,7 +96,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2 text-sm text-gray-400">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                <span>Chittagong, Bangladesh</span>
+                <span>A.R. Garden, Amanat Ullah Road, Pahartali, Chittagong, Bangladesh</span>
               </li>
             </ul>
           </div>

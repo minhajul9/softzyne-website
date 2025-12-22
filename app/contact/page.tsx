@@ -181,7 +181,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <h3 className="font-semibold mb-1">Phone</h3>
-                        <p className="text-sm text-muted-foreground">+880 1886557070</p>
+                        <p className="text-sm text-muted-foreground">+880 1886-557070</p>
                       </div>
                     </CardContent>
                   </Card>
