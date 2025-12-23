@@ -55,6 +55,7 @@ export function HeroCarousel() {
           muted
           loop
           playsInline
+          preload="metadata"
           className="w-full h-full object-cover opacity-40"
         >
           <source
