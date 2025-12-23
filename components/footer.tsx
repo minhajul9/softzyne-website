@@ -4,12 +4,12 @@ import { Facebook, Linkedin, Mail, Phone, MapPin, Instagram } from "lucide-react
 
 export function Footer() {
   return (
-    <footer className="bg-[#0a0f1a] text-white">
+    <footer className="bg-[#0a0f1a] text-white px-2">
       <div className=" container mx-auto py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="space-y-4">
-            <div className="flex items-center gap-3">
+          <div className="space-y-4 col-span-2 md:col-span-1 text-center md:text-start">
+            <div className="flex items-center justify-center md:justify-start gap-3">
               <Image
                 src="/images/logo-fb-dp-removebg-preview.png"
                 alt="Softzyne"
@@ -22,7 +22,7 @@ export function Footer() {
             <p className="text-sm text-gray-400 leading-relaxed">
               Professional web development and digital marketing solutions to grow your business.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 items-center justify-center md:justify-start">
               <a
                 href="https://www.facebook.com/softzyne"
                 target="_blank"
@@ -83,9 +83,9 @@ export function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h3 className="font-semibold mb-4">Contact Us</h3>
-            <ul className="space-y-3">
+          <div className="col-span-2 md:col-span-1">
+            <h3 className="font-semibold mb-4 text-center md:text-start">Contact Us</h3>
+            <ul className="space-y-3 px-10 md:px-0">
               <li className="flex items-start gap-2 text-sm text-gray-400">
                 <Phone className="h-4 w-4 mt-0.5 flex-shrink-0" />
                 <span>+880 1886-557070</span>

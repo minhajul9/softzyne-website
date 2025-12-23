@@ -66,7 +66,7 @@ export function ClientsPartners() {
                 key={index}
                 className="
                   
-                  basis-1/2
+                  basis-1/3
                   sm:basis-1/3
                   md:basis-1/4
                   lg:basis-1/5
@@ -82,10 +82,7 @@ export function ClientsPartners() {
                       alt={client.name}
                       title={client.name}
                       fill
-                      className="object-contain
-                                 opacity-60 hover:opacity-100
-                                 grayscale hover:grayscale-0
-                                 transition"
+                      className="object-contain"
                     />
                   </div>
                 </div>

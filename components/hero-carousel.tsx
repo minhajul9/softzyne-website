@@ -47,7 +47,7 @@ export function HeroCarousel() {
   }, [])
 
   return (
-    <section className="relative h-screen overflow-hidden bg-gray-900">
+    <section className="relative h-screen overflow-hidden bg-gray-900 -mt-16.25">
       {/* Background Video (STATIC) */}
       <div className="absolute inset-0">
         <video

@@ -5,10 +5,15 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { useState, useEffect } from "react"
+import { usePathname } from "next/navigation"
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [isVisible, setIsVisible] = useState(true)
+  const [isVisible, setIsVisible] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const pathname = usePathname()
+  const isHome = pathname === "/"
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -20,6 +25,8 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20)
+
       const footer = document.querySelector("footer")
       if (footer) {
         const footerRect = footer.getBoundingClientRect()
@@ -34,7 +41,9 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-100 w-full border-b border-border/40 bg-background/95   transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}
+      className={`sticky top-0 z-100 w-full border-b border-border/40 bg-background/95   transition-all duration-500 ease-in-out ${isVisible ? "translate-y-0" : "-translate-y-full"} px-2 ${isHome && !isScrolled
+        ? "bg-transparent border-transparent"
+        : "bg-background backdrop-blur border-b border-border/40"}`}
     >
       <nav className="container mx-auto flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
@@ -45,7 +54,9 @@ export function Header() {
             height={40}
             className="h-10 w-auto"
           />
-          <span className="font-semibold text-lg hidden sm:inline-block text-foreground">
+          <span className={`font-semibold text-lg hidden sm:inline-block transition-colors duration-500 ease-in-out ${isHome && !isScrolled
+            ? "text-white"
+            : "text-foreground"}`}>
             Softzyne Digital Solutions
           </span>
         </Link>
@@ -56,7 +67,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className={`text-md font-medium hover:text-foreground transition-colors ${pathname == link.href ? "text-brand-orange" : "text-muted-foreground"}`}
             >
               {link.label}
             </Link>
@@ -80,7 +91,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className={`text-md font-medium hover:text-foreground transition-colors ${pathname == link.href ? "text-brand-orange" : "text-muted-foreground"}`}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label}

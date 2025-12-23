@@ -4,6 +4,7 @@ import { Geist } from "next/font/google"
 import "./globals.css"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import WelcomePopup from "@/components/WelcomePopUp"
 
 const geist = Geist({ subsets: ["latin"] })
 
@@ -22,10 +23,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+
   return (
     <html lang="en">
       <body className={`${geist.className} font-sans antialiased`}>
         <Header />
+        <WelcomePopup
+        showPopup={true}
+      />
         {children}
         <Footer />
       </body>
