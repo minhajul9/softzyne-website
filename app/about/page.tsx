@@ -1,9 +1,8 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Target, Eye, UsersIcon } from "lucide-react"
 import Link from "next/link"
+import { ClientsPartners } from "@/components/clients-partners"
 
 const teamMembers = [
   {
@@ -19,7 +18,7 @@ const teamMembers = [
   },
   {
     name: "Abdur Rahman Robin",
-    role: "Associate Founder & Digital Marketing Dept. Head",
+    role: "Associate Founder",
     education: "BSc in CSE from IIUC",
   },
 ]
@@ -36,7 +35,6 @@ const clients = [
 export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/20">
@@ -89,9 +87,7 @@ export default function AboutPage() {
                   </div>
                   <h2 className="text-2xl md:text-3xl font-bold">Our Mission</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    To empower businesses with cutting-edge digital solutions that drive growth, enhance online
-                    presence, and deliver measurable results through innovation, expertise, and unwavering commitment to
-                    excellence.
+                    At Softzyne Digital Solutions, our mission is to design and develop secure, scalable, and high-performance software solutions that help businesses worldwide establish, manage, and grow their digital presence through e-commerce platforms, corporate websites, ERP systems, and custom applications.
                   </p>
                 </CardContent>
               </Card>
@@ -103,9 +99,7 @@ export default function AboutPage() {
                   </div>
                   <h2 className="text-2xl md:text-3xl font-bold">Our Vision</h2>
                   <p className="text-muted-foreground leading-relaxed">
-                    To become Bangladesh's leading digital solutions provider, recognized for our commitment to quality,
-                    innovation, and client success, while setting new standards in web development and digital marketing
-                    excellence.
+                    Our vision is to become a leading global software development company, enabling digital transformation through innovation, technology excellence, and customer-driven solutions.
                   </p>
                 </CardContent>
               </Card>
@@ -133,10 +127,7 @@ export default function AboutPage() {
                     <div className="space-y-2">
                       <h3 className="text-xl font-semibold">{member.name}</h3>
                       <p className="text-sm font-medium text-brand-blue">{member.role}</p>
-                      <p className="text-sm text-muted-foreground">{member.education}</p>
-                      {member.experience && (
-                        <p className="text-sm text-muted-foreground pt-2 border-t border-border">{member.experience}</p>
-                      )}
+                      
                     </div>
                   </CardContent>
                 </Card>
@@ -148,22 +139,9 @@ export default function AboutPage() {
         {/* Our Clients */}
         <section className="py-16 md:py-24 bg-muted/30">
           <div className="container mx-auto">
-            <div className="text-center mb-12 space-y-4">
-              <h2 className="text-3xl md:text-5xl font-bold">Our Clients</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Trusted by businesses across various industries
-              </p>
-            </div>
+            
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              {clients.map((client, index) => (
-                <Card key={index} className="hover:shadow-md transition-shadow">
-                  <CardContent className="p-6 text-center">
-                    <p className="font-semibold text-muted-foreground">{client}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <ClientsPartners />
           </div>
         </section>
 
@@ -185,7 +163,6 @@ export default function AboutPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   )
 }

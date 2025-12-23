@@ -1,28 +1,44 @@
 "use client"
 
-import { Target, Lightbulb, Users, TrendingUp } from "lucide-react"
+import {  Lightbulb, Users,  Award, ShieldCheck, Globe, Lock } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
 const reasons = [
   {
-    icon: Target,
-    title: "Results-Driven Approach",
-    description: "We focus on delivering measurable outcomes that align with your business objectives",
+    icon: Award,
+    title: "Quality Excellence",
+    description:
+      "We are committed to delivering high-quality software solutions by maintaining strong engineering standards, attention to detail, and reliable delivery practices.",
   },
   {
     icon: Lightbulb,
-    title: "Innovative Solutions",
-    description: "Cutting-edge technologies and creative strategies to keep you ahead of the competition",
+    title: "Continuous Innovation",
+    description:
+      "We embrace emerging technologies, modern frameworks, and agile methodologies to build future-ready digital solutions.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Trust & Integrity",
+    description:
+      "We foster transparent, ethical, and accountable relationships with our clients, partners, and team members.",
   },
   {
     icon: Users,
-    title: "Expert Team",
-    description: "Skilled professionals with years of experience in web development and digital marketing",
+    title: "Customer Success",
+    description:
+      "We define our success through our clients’ growth, focusing on understanding business goals and delivering solutions that create measurable impact.",
   },
   {
-    icon: TrendingUp,
-    title: "Proven Track Record",
-    description: "Successfully delivered projects for diverse clients across multiple industries",
+    icon: Lock,
+    title: "Security First",
+    description:
+      "We prioritize data protection, system reliability, and compliance to ensure safe and dependable digital environments.",
+  },
+  {
+    icon: Globe,
+    title: "Global Mindset",
+    description:
+      "We serve clients across the globe with professionalism, cultural awareness, and consistent service quality.",
   },
 ]
 
@@ -57,7 +73,7 @@ export function WhyChooseUs() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 mx-auto">
           {reasons.map((reason, index) => (
             <div
               key={index}

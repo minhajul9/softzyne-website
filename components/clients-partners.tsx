@@ -39,7 +39,7 @@ export function ClientsPartners() {
         <div className="text-center mb-12 space-y-4">
           <h2 className="text-3xl md:text-5xl font-bold">Our Clients</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Trusted by leading businesses across various industries
+            Trusted by businesses across various industries
           </p>
         </div>
 

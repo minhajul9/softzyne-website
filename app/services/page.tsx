@@ -1,5 +1,3 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
@@ -67,7 +65,6 @@ const services = [
 export default function ServicesPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/20">
@@ -138,7 +135,6 @@ export default function ServicesPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   )
 }

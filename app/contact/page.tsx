@@ -1,9 +1,6 @@
 "use client"
 
 import type React from "react"
-
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -48,7 +45,6 @@ export default function ContactPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="py-16 md:py-24 from-background to-muted/20">
@@ -205,7 +201,6 @@ export default function ContactPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   )
 }

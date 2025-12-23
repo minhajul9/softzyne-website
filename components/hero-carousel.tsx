@@ -62,7 +62,7 @@ export function HeroCarousel() {
             type="video/mp4"
           />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/60" />
       </div>
 
       {/* Carousel Content */}
@@ -82,12 +82,12 @@ export function HeroCarousel() {
           <CarouselContent>
             {slides.map((slide, index) => (
               <CarouselItem key={index}>
-                <div className="container mx-auto space-y-6 animate-fade-in">
-                  <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight max-w-7xl">
+                <div className="container mx-auto space-y-6 animate-fade-in text-center">
+                  <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight max-w-7xl mx-auto">
                     {slide.title}
                   </h1>
 
-                  <p className="text-lg md:text-xl text-gray-200 max-w-3xl">
+                  <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto">
                     {slide.description}
                   </p>
 
@@ -107,8 +107,8 @@ export function HeroCarousel() {
           </CarouselContent>
 
           {/* Navigation */}
-          <CarouselPrevious className="left-4 bg-white/10 hover:bg-white/20 text-white" />
-          <CarouselNext className="right-4 bg-white/10 hover:bg-white/20 text-white" />
+          {/* <CarouselPrevious className="left-4 bg-white/10 hover:bg-white/20 text-white" />
+          <CarouselNext className="right-4 bg-white/10 hover:bg-white/20 text-white" /> */}
         </Carousel>
       </div>
     </section>

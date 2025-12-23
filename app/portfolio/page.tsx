@@ -1,7 +1,5 @@
 "use client"
 
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 import { PortfolioCard } from "@/components/portfolio-card"
 import { portfolioProjects, categories } from "@/lib/portfolio-data"
 import { Button } from "@/components/ui/button"
@@ -17,7 +15,6 @@ export default function PortfolioPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <Header />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/20">
@@ -70,7 +67,6 @@ export default function PortfolioPage() {
           </div>
         </section>
       </main>
-      <Footer />
     </div>
   )
 }
