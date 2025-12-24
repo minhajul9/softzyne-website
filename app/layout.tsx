@@ -1,39 +1,37 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Geist } from "next/font/google"
-import "./globals.css"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import WelcomePopup from "@/components/WelcomePopUp"
+import type { Metadata } from "next";
+import "./globals.css";
 
-const geist = Geist({ subsets: ["latin"] })
+import { Poppins } from 'next/font/google'
+
+const poppins = Poppins({
+    weight: ['300', '400', '500', '600', '700'],
+    style: ['normal'],
+    subsets: ['latin']
+})
+
 
 export const metadata: Metadata = {
-  title: "Softzyne Digital Solutions - Web Development & Digital Marketing",
-  description:
-    "Professional web development and digital marketing services. We create innovative digital solutions for your business.",
-  keywords: ["web development", "digital marketing", "software solutions", "SEO", "web design"],
-  icons: {
-    icon: "/logo.png",
-  },
+    title: "Softzyne Digital Solutions - Web Development & Digital Marketing",
+    description:
+        "Professional web development and digital marketing services. We create innovative digital solutions for your business.",
+    keywords: ["web development", "digital marketing", "software solutions", "SEO", "web design"],
+    icons: {
+        icon: "/logo.png",
+    },
 }
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode
+    children: React.ReactNode;
 }>) {
-
-  return (
-    <html lang="en">
-      <body className={`${geist.className} font-sans antialiased`}>
-        <Header />
-        <WelcomePopup
-        showPopup={true}
-      />
-        {children}
-        <Footer />
-      </body>
-    </html>
-  )
+    return (
+        <html lang="en" className="!scroll-smooth">
+            <body
+                className={`${poppins.className} antialiased`}
+            >
+                {children}
+            </body>
+        </html>
+    );
 }
