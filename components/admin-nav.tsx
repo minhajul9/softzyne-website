@@ -22,7 +22,7 @@ export function AdminNav() {
 
   const handleLogout = () => {
     setAuthenticated(false)
-    router.push("/admin/login")
+    router.push("/login")
   }
 
   return (
